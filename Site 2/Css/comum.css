@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body{
+	margin: 0px;
+}
+
+header{
+	width: 100%;
+	background-color: #eee;
+	position: relative;
+	height: 120px;
+	box-shadow: 0px 5px 5px #aaa;
+}
+
+#logo{
+	width: 6%;
+	margin-top: 22px;
+	margin-left: 20px;
+	left: 10px;
+	position: absolute;
+}
+
+nav{
+	background-color: #eee;
+	position: absolute;
+	right:30px;
+	top:45px;
+}
+
+#menu{
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu li{
+	list-style: none;
+	float: left;
+}
+
+#menu li a{
+	text-decoration: none;
+	color: blue;
+	background-color: #eee;
+	padding:5px 10px 5px 10px;
+	font-size: 20px;
+	font-family: 'Quicksand', Arial;
+}
+
+#menu li a:hover{
+	color: darkblue;
+}
+
+#menu i{
+	margin-right: 5px;
+}
+
+main{
+	
+}
+
+footer{
+	background-color: #eee;
+	width: 100%;
+	font-family: 'Quicksand', Arial;
+	height: 150px;
+	position: relative;
+	top:35px;
+	bottom: 0px;
+}
+
+footer div{
+	margin: 10px;
+	width: 300px;
+	position: relative;
+}
+
+#social{
+	float: right;
+	margin: 10px 65px;
+
+}
+
+#institucional{
+	float: left;
+	margin: 10px 65px;
+	font-size: 12px;
+}
+
+#pagamento{
+	float: left;
+	margin: 10px 65px;
+}
+
+footer h4{
+	margin: 10px 0px;
+	width: 200px;
+}
+
+footer ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+footer ul li{
+	list-style: none;	
+}
+
+#social li, #pagamento li{
+	float: left;
+}
+
+footer li a{
+	text-decoration: none;
+	color: blue;
+}
+
+footer li a img{
+	width: 60px;
+	margin: 10px 5px;
+}

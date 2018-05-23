@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+form{
+	font-family: 'Quicksand', Arial;
+	width: 30%;
+	position: relative;
+	background-color: #FFD700;
+	top: 20px;
+	left: 20px;
+	bottom: 20px;
+	padding: 20px;
+}
+
+form div{
+	margin: 15px 0px;
+}
