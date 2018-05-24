@@ -1,16 +1,64 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+section{
+	width: 40%;
+	position: relative;
+	float: left;
+	top: 35px;
+	left: 140px;
+}
+
 form{
 	font-family: 'Quicksand', Arial;
-	width: 30%;
-	position: relative;
-	background-color: #FFD700;
-	top: 20px;
-	left: 20px;
-	bottom: 20px;
+	width: 100%;	
+	background-color: #FFD700;	
 	padding: 20px;
 }
 
 form div{
 	margin: 15px 0px;
+}
+
+input[type="text"], select{
+	height: 25px;
+	border-radius: 3px;
+	border-color: #263BEB;
+	width: 200px;
+}
+
+input[type="submit"]{
+	width: 100%;
+	background-color: #06c;
+	height: 40px;
+	margin-top: 30px;
+	color: white;
+	font-family: 'Quicksand', Arial;
+	border-radius: 5px;
+}
+
+.linha{
+	float: left;
+	margin: 10px 10px;
+}
+
+.caixa{
+	clear: both;
+}
+
+.carousel div{
+	width: 400px;
+	height: 300px;
+}
+
+aside{
+	float: right;
+	width: 400px;
+	position: relative;
+	top:35px;
+	right: 180px;
+}
+
+footer {
+	top:65px;
+	clear: both;
 }

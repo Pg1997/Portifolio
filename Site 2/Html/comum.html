@@ -3,58 +3,15 @@
 <head>
 	<title>Layout Padrão</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="../Css/comum.css">
 	<link rel="stylesheet" type="text/css" href="../Css/index.css">
 
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-    
-    <script>
-      $( function() {
-	    var dateFormat = "mm/dd/yy",
-	      from = $( "#from" )
-	        .datepicker({
-	          defaultDate: "+1w",
-	          changeMonth: true,
-	          numberOfMonths: 2,
-	          dateFormat: 'dd/mm/yy',
-        	  dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
-        	  dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
-        	  dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
-        	  monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-        	  monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
-	        })
-	        .on( "change", function() {
-	          to.datepicker( "option", "minDate", getDate( this ) );
-	        }),
-	      to = $( "#to" ).datepicker({
-	        defaultDate: "+1w",
-	        changeMonth: true,
-	        numberOfMonths: 2,
-	        dateFormat: 'dd/mm/yy',
-        	dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
-        	dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
-        	dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
-        	monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-        	monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
-	      })
-	      .on( "change", function() {
-	        from.datepicker( "option", "maxDate", getDate( this ) );
-	      });
-	 
-	    function getDate( element ) {
-	      var date;
-	      try {
-	        date = $.datepicker.parseDate( dateFormat, element.value );
-	      } catch( error ) {
-	        date = null;
-	      }
-	 
-	      return date;
-	    }
-	  } );
-    </script>
+	
+	<link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+  	<link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>   
+
 
 </head>
 <body>
@@ -76,56 +33,67 @@
 	<main>
 		<section>
 			<form>
-				<div>
-					<input type="radio" name="a" value="Ida" id="ida" checked>
-					<label for="ida">Ida e Volta</label>
+				<div class="caixa">
+					<div class="linha">
+						<input type="radio" name="a" value="Ida" id="ida" checked>
+						<label for="ida">Ida e Volta</label>
+					</div>
+					<div class="linha">
+						<input type="radio" name="a" value="Volta" id="volta">
+						<label for="volta">Somente Ida</label>
+					</div>
 				</div>
-				<div>
-					<input type="radio" name="a" value="Volta" id="volta">
-					<label for="volta">Somente Ida</label>
+				<div class="caixa">
+					<div class="linha">
+						<label>Data de Partida</label></br>
+						<input type="text" id="from" name="dp">
+					</div>
+					<div class="linha">
+						<label>Data de Chegada</label></br>
+						<input type="text" id="to" name="dv">
+					</div>
 				</div>
-				<div>
-					<label>Data de Partida</label></br>
-					<input type="text" id="from" name="dp">
+				<div class="caixa">
+					<div class="linha">
+						<label>Total de Adutos</label></br>
+						<select name="ad">
+							<option values="1">1</option>
+							<option values="2">2</option>
+							<option values="3">3</option>
+							<option values="4">4</option>
+							<option values="5">5</option>
+							<option values="6">6</option>
+							<option values="7">7</option>
+							<option values="8">8</option>
+							<option values="9">9</option>
+						</select>
+					</div>
+					<div class="linha">
+						<label>Total de Crianças</label></br>
+						<select name="cr">
+							<option values="0">0</option>
+							<option values="1">1</option>
+							<option values="2">2</option>
+							<option values="3">3</option>
+							<option values="4">4</option>
+							<option values="5">5</option>
+							<option values="6">6</option>
+							<option values="7">7</option>
+							<option values="8">8</option>
+							<option values="9">9</option>
+						</select>
+					</div>
 				</div>
-				<div>
-					<label>Data de Chegada</label></br>
-					<input type="text" id="to" name="dv">
+				<div class="caixa">
+					<input type="submit" value="Buscar">
 				</div>
-				<div>
-					<label>Total de Adutos</label></br>
-					<select name="ad">
-						<option values="1">1</option>
-						<option values="2">2</option>
-						<option values="3">3</option>
-						<option values="4">4</option>
-						<option values="5">5</option>
-						<option values="6">6</option>
-						<option values="7">7</option>
-						<option values="8">8</option>
-						<option values="9">9</option>
-					</select>
-				</div>
-				<div>
-					<label>Total de Crianças</label></br>
-					<select name="cr">
-						<option values="0">0</option>
-						<option values="1">1</option>
-						<option values="2">2</option>
-						<option values="3">3</option>
-						<option values="4">4</option>
-						<option values="5">5</option>
-						<option values="6">6</option>
-						<option values="7">7</option>
-						<option values="8">8</option>
-						<option values="9">9</option>
-					</select>
-				</div>
-				<input type="submit" value="Buscar">
 			</form>
 		</section>
 		<aside>
-			
+			<div class="carousel">
+				<div><img src="../Imagens/imagem2.jpg" alt="paisagem1"/></div>
+  				<div><img src="../Imagens/imagem3.jpg" alt="paisagem2"/></div>  				
+			</div>
 		</aside>
 	</main>
 
@@ -162,6 +130,11 @@
 			</ul>	
 		</div>
 	</footer>
+
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+	<script type="text/javascript" src="../slick/slick.min.js"></script>
+	<script type="text/javascript" src="../Java Script/comum.js"></script>
 
 </body>
 </html>
